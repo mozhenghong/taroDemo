@@ -1,5 +1,14 @@
 export default defineAppConfig({
   pages: ["pages/index/index", "pages/home/index"],
+  subpackages: [
+    {
+      "root": "pages/work",
+      "name": "work",
+      "pages": [
+        "index"
+      ]
+    }
+  ],
   tabBar: {
     list: [
       {

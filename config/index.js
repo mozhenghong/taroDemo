@@ -12,8 +12,11 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
+  // outputRoot: `dist/${process.env.TARO_ENV}`, // 微信小程序编译后的目录就会是 dist/weapp，H5 编译后目录就会是 dist/h5
   outputRoot: 'dist',
-  plugins: [],
+  plugins: [
+    '@tarojs/plugin-html'  // 支持使用 HTML 标签
+  ],
   defineConstants: {
   },
   copy: {
@@ -50,7 +53,12 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    // webpackChain (chain, webpack) {
+    //   // 打包体积分析
+    //   chain.plugin('analyzer')
+    //     .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
+    // }
   },
   // H5 端专用配置
   h5: {
