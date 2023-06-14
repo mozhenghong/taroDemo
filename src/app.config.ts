@@ -3,14 +3,14 @@ export default defineAppConfig({
   tabBar: {
     list: [
       {
-        iconPath: "resource/home.png",
-        selectedIconPath: "resource/home_on.png",
+        iconPath: "assets/home.png",
+        selectedIconPath: "assets/home_on.png",
         pagePath: "pages/index/index",
         text: "index",
       },
       {
-        iconPath: "resource/home.png",
-        selectedIconPath: "resource/home_on.png",
+        iconPath: "assets/home.png",
+        selectedIconPath: "assets/home_on.png",
         pagePath: "pages/home/index",
         text: "home",
       },
