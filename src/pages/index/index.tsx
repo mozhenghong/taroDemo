@@ -1,8 +1,11 @@
 import { View, Text } from '@tarojs/components'
 import { useLoad } from '@tarojs/taro'
 import styles from './index.module.scss'
+import { useStores } from '@/store'
+import { observer } from 'mobx-react'
 
-export default function Index() {
+function Index() {
+  const { userStore: { addCount, count } } = useStores();
 
   useLoad(() => {
     console.log('Page loaded.')
@@ -10,8 +13,10 @@ export default function Index() {
 
   return (
     <View className={styles.index}>
-      <Text>Hello world!</Text>
-      <Text>首页首页</Text>
+      <Text>{count}</Text>
+      <View onClick={() => addCount(7)}>add count</View>
     </View>
   )
 }
+
+export default observer(Index)

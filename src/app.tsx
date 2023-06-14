@@ -1,5 +1,7 @@
 import { PropsWithChildren } from 'react'
 import { useLaunch } from '@tarojs/taro'
+import { Provider } from 'mobx-react'
+import { rootStore } from '@/store';
 import './app.scss'
 
 function App({ children }: PropsWithChildren) {
@@ -9,7 +11,11 @@ function App({ children }: PropsWithChildren) {
   })
 
   // children 是将要会渲染的页面
-  return children
+  return (
+    <Provider {...rootStore}>
+      {children}
+    </Provider>
+  );
 }
 
 export default App
