@@ -17,6 +17,7 @@ const config = {
   plugins: [
     '@tarojs/plugin-html'  // 支持使用 HTML 标签
   ],
+  
   defineConstants: {
   },
   copy: {
