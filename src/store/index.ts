@@ -1,11 +1,12 @@
-import React from "react";
-import userStore from "./user.store";
+import { configureStore } from '@reduxjs/toolkit';
+import { TypedUseSelectorHook, useDispatch as useReduxDispatch, useSelector as useReduxSelector } from 'react-redux';
+import allReducers, { RootState } from './slices/index';
 
-const store = {
-  userStore,
-};
+const store = configureStore({
+    reducer: allReducers,
+});
 
-const storesContext = React.createContext({ ...store });
-export const useStores = () => React.useContext(storesContext);
+export default store;
 
-export const rootStore = { ...store };
+export const useDispatch = () => useReduxDispatch();
+export const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector;

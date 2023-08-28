@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
 import { useLaunch } from '@tarojs/taro'
-import { Provider } from 'mobx-react'
-import { rootStore } from '@/store';
 import './app.scss'
+import { Provider } from 'react-redux'
+import store from '@/store'
 
 function App({ children }: PropsWithChildren) {
 
@@ -12,9 +12,10 @@ function App({ children }: PropsWithChildren) {
 
   // children 是将要会渲染的页面
   return (
-    <Provider {...rootStore}>
+    <Provider store={store}>
       {children}
     </Provider>
+
   );
 }
 
