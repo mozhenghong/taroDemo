@@ -1,17 +1,35 @@
 {
-  "miniprogramRoot": "./dist",
-  "projectname": "myApp",
-  "description": "爱新芽数字化正畸系统小程序",
-  "appid": "touristappid",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "enhance": false,
-    "compileHotReLoad": false,
-    "postcss": false,
-    "minified": false,
-    "ignoreUploadUnusedFiles": false,
-    "ignoreDevUnusedFiles": false
-  },
-  "compileType": "miniprogram"
+    "miniprogramRoot": "dist/",
+    "description": "爱新芽数字化正畸系统小程序",
+    "setting": {
+        "urlCheck": true,
+        "es6": false,
+        "enhance": false,
+        "compileHotReLoad": false,
+        "postcss": false,
+        "minified": false,
+        "ignoreUploadUnusedFiles": false,
+        "ignoreDevUnusedFiles": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "coverView": false,
+        "showShadowRootInWxmlPanel": false,
+        "packNpmRelationList": []
+    },
+    "compileType": "miniprogram",
+    "srcMiniprogramRoot": "dist/",
+    "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
+    "libVersion": "3.0.1",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "appid": "wx9aeefd7dbb817ce4"
 }
