@@ -20,6 +20,7 @@ function Index() {
       <View onClick={()=> dispatch(addCount(4))}>add count</View>
       {/* 测试UI库 */}
        <Button openType='share'>分享给好友</Button>
+       <Button type="primary">主要按钮</Button>
     </View>
   )
 }

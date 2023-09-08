@@ -4,11 +4,7 @@ module.exports = {
   },
   defineConstants: {
   },
-  mini: {
-    prerender: {
-      include: ['pages/home/index'], // 预渲染：'pages/index/index' 在编译生产模式时开启预渲染
-    }
-  },
+  mini: {},
   h5: {
     /**
      * WebpackChain 插件配置
